@@ -42,4 +42,15 @@ describe("fail", () => {
     const actual = enhancer.fail(item);
     expect(actual.enhancement).toBe(expected);
   });
+
+  it("Will decrease by 1 if enhancement is greater than 16", () => {
+    const item = {
+      name: "Item 1",
+      enhancement: 17,
+      durability: 35,
+    };
+    const expected = 16;
+    const actual = enhancer.fail(item);
+    expected(actual.enhancement).toBe(expected);
+  });
 });
