@@ -30,3 +30,16 @@ describe("repair", () => {
     });
   });
 });
+
+describe("fail", () => {
+  it("Will decrease by 5 if enhancement is less than 15", () => {
+    const item = {
+      name: "Item 1",
+      enhancement: 10,
+      durability: 35,
+    };
+    const expected = 5;
+    const actual = enhancer.fail(item);
+    expect(actual.enhancement).toBe(expected);
+  });
+});
