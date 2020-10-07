@@ -64,4 +64,18 @@ describe("fail", () => {
     const actual = enhancer.fail(item);
     expect(actual.enhancement).toBe(expected);
   });
+
+  it("gets() items", () => {
+    expect(
+      enhancer.get({
+        name: "Josh",
+        durability: 15,
+        enhancement: 5,
+      })
+    ).toEqual({
+      name: "Josh",
+      durability: 15,
+      enhancement: 5,
+    });
+  });
 });
