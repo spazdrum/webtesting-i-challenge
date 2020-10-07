@@ -51,6 +51,6 @@ describe("fail", () => {
     };
     const expected = 16;
     const actual = enhancer.fail(item);
-    expected(actual.enhancement).toBe(expected);
+    expect(actual.enhancement).toBe(expected);
   });
 });
