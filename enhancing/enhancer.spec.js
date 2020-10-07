@@ -15,18 +15,18 @@ describe("repair", () => {
       enhancement: 10,
     });
   });
-});
 
-it("Should increment enhancement by 1 if less than 20", () => {
-  expect(
-    enhancer.success({
+  it("Should increment enhancement by 1 if less than 20", () => {
+    expect(
+      enhancer.success({
+        name: "1up",
+        durability: 100,
+        enhancement: 19,
+      })
+    ).toEqual({
       name: "1up",
       durability: 100,
-      enhancement: 19,
-    })
-  ).toEqual({
-    name: "1up",
-    durability: 100,
-    enhancement: 20,
+      enhancement: 20,
+    });
   });
 });
